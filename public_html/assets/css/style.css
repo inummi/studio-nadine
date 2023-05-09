@@ -1,0 +1,205 @@
+* {
+
+	font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #3A4F66;
+	font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color: #3A4F66;
+    transition: 0.3s;
+}
+
+a:hover{
+	color: #E264AF;
+}
+
+/*
+    Header
+*/
+
+
+.phone{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #3A4F66;
+	margin: 2rem;
+}
+
+.social {
+	margin: 2rem;
+}
+.social a{
+	margin: 10px;
+	transition: 0.3s;
+}
+ 
+.menu ul{
+	list-style: none;
+	font-family: sans-serif;
+	font-weight: 500;
+}
+
+.menu ul li{
+	display: inline-block;
+	margin: 0 10px;
+}
+
+
+/*
+    Section Lady
+*/
+
+.lady_title{
+	font-family: 'Amatic SC', cursive;
+	margin: 4rem 0;
+	font-size: 45px;
+}
+
+/*
+    Section main
+*/
+
+.card{
+	
+	margin: 5px 0;
+}
+
+
+/*
+    Категория на главной
+*/
+
+
+*, *:after, *:before { 
+	border-box; 
+	box-sizing: border-box; 
+}
+
+.clearfix:before, .clearfix:after { 
+	content: ''; 
+	display: table; 
+}
+
+.clearfix:after { 
+	clear: both; 
+}
+
+.hover-text-one {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	border-radius: 5px;
+}
+.hover-text-one figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	background: #000000;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.hover-text-one figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 0.6;
+}
+.hover-text-one figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text-one figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+	color: #ffffff;
+}
+.hover-text-one figure h2 span {
+	font-weight: 300;
+}
+.hover-text-one figure h2{
+	margin-top: 5rem;
+	width: 100%;
+}
+
+/* Эффект при наведении */
+figure.effect-text-three {
+	background: #000000;
+}
+figure.effect-text-three img {
+	transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-text-three:hover img {
+	opacity: 0.8;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-text-three figcaption {
+	text-align: center;
+}
+figure.effect-text-three h2 {
+	position: relative;
+	overflow: hidden;
+	padding: 0.5em 0;
+}
+figure.effect-text-three h2::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+figure.effect-text-three:hover h2::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*
+    Footer
+*/
+
+footer{
+	padding: 50px;
+}
+
+
+/*
+    auth
+*/
+
+.auth{
+	margin: 10rem 0;
+}
+
+.auth input{
+	padding: 0.5rem;
+}
+
