@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    require 'path.php';
+    require 'app/controllers/categoriesController.php';
+?>
+
+<?php if ($_SESSION['status'] == 1):?>
+    <div class="container-fluid admin-header mb-3">
+        <div class="row">
+            <div class="col-xl-6 text-start admin-menu">
+                <ul>
+                    <li><a href="<?=BASE_URL?>">Сайт</a></li>
+                    <li><a href="<?=BASE_URL . 'app/admin/categories.php'?>">Админ-панель</a></li>
+                </ul>
+            </div>
+            <div class="col-xl-6 text-end  admin-menu">
+                <?=$_SESSION['login']?>
+            </div>
+        </div>
+    </div>
+<?php endif;?>
+
     <div class="header mt-3">
       <div class="container-fluid text-center">
         <div class="row justify-content-center">
@@ -25,12 +47,9 @@
           <div class="col-xl-12">
             <div class="menu">
             <ul class="">
-              <li><a href="#">вышивка</a></li>
-              <li><a href="#">толстовки</a></li>
-              <li><a href="#">пижамы</a></li>
-              <li><a href="#">халаты</a></li>
-              <li><a href="#">спец одежда</a></li>
-              <li><a href="#">постельное белье</a></li>
+              <?php foreach(giveAllCategories() as $key => $category): ?>
+                <li><a href="#"><?=$category['name']?></a></li>
+              <?php endforeach;?>
             </ul>
           </div>
         </div>

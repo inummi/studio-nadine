@@ -1,4 +1,7 @@
-<?php include 'app/controllers/userController.php'?>
+<?php 
+    require 'path.php';
+    require 'app/controllers/userController.php';
+?>
 
 <!doctype html>
 <html lang="ru">
@@ -10,7 +13,7 @@
       <div class="container">
         <form class="auth row justify-content-center text-center" method="post">
           <div class="mb-3 col-12 col-md-4">
-          <label for="auth" class="form-label"><?=$mg?></label>
+          <p><?=$msg?></p>
           </div>
           <div class="w-100"></div>
           <div class="mb-3 col-12 col-md-4">

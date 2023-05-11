@@ -203,3 +203,27 @@ footer{
 	padding: 0.5rem;
 }
 
+/*
+    админ
+*/
+.admin-header{
+    background-color: #1E90FF;
+}
+
+.admin-menu{
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.admin-menu ul{
+    list-style: none;
+}
+.admin-menu ul li{
+    display: inline;
+    margin-right: 15px;
+}
+
+.admin-menu ul li a{
+    color: #ffffff;
+}
