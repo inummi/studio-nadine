@@ -12,43 +12,32 @@
     <section class="services">
         <div class="container">
             <div class="row">
-                <h2>Услуги</h2>
+                <h2><?=$_GET['name']?></h2>
                 <div class="col-xl-6">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Вышивка 10 на 10 см.
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Стоимость от 200 рублей.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Вышивка 20 на 20 см.
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Стоимость от 400 рублей.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Вышивка 30 на 30 см.
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Стоимость от 600 рублей.</div>
-                        </div>
-                      </div>
+                    <?php foreach(getServiceByCategories() as $key=>$value):?>
+                        <?php if($key === $_GET['name']): ?>
+                            <?php foreach($value as $key2=>$value2):?>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?=$value2['id']?>" aria-expanded="false" aria-controls="flush-collapse<?=$value2['id']?>">
+                                      <?=$value2['service']?>
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapse<?=$value2['id']?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p><?=$value2['description']?></p>
+                                        <p>Стомость от <?=$value2['price']?> р.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="col-xl-6">
-                    <p>Машинная вышивка – это один из самых современных способов нанесения изображения на различные материалы. Она выполняется специальными автоматическими машинами, которые действуют по заданной программе.</p>
+                    <p><?=$_GET['description'];?></p>
                 </div>
             </div>
         </div>

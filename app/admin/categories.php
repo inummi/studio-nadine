@@ -8,12 +8,9 @@
         <!-- header-admin END -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-6 col-md-2 menu">
-                    <ul>
-                        <li><a href="#">Категории</li></a>
-                        <li><a href="#">Услуги</li></a>
-                    </ul>
-                </div>
+               <!-- menu-admin START -->
+               <?php include '../include_views/admin/menu-admin.php'?>
+               <!-- menu-admin END -->
                 <div class="col-sm-6 col-md-10">
                     <div class="row">
                     <h2>Категории</h2>

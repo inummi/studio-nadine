@@ -80,7 +80,6 @@ a:hover{
 
 
 *, *:after, *:before { 
-	border-box; 
 	box-sizing: border-box; 
 }
 

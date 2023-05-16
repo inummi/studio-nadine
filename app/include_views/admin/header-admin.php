@@ -2,6 +2,7 @@
     session_start();
     require '../../path.php';
     require '../controllers/categoriesController.php';
+    require '../controllers/servicesController.php';
 ?>
 <header>
 <?php if ($_SESSION['status'] == 1):?>

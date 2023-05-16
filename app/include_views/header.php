@@ -2,6 +2,7 @@
     session_start();
     require 'path.php';
     require 'app/controllers/categoriesController.php';
+    require 'app/controllers/servicesController.php';
 ?>
 
 <?php if ($_SESSION['status'] == 1):?>
@@ -48,7 +49,7 @@
             <div class="menu">
             <ul class="">
               <?php foreach(giveAllCategories() as $key => $category): ?>
-                <li><a href="#"><?=$category['name']?></a></li>
+                <li><a href="<?= BASE_URL . 'service.php?'. 'id=' . $category['id']. '&'. 'name=' . $category['name'] . '&'. 'description=' . $category['description']?>"><?=$category['name']?></a></li>
               <?php endforeach;?>
             </ul>
           </div>
