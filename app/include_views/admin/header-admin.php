@@ -3,6 +3,7 @@
     require '../../path.php';
     require '../controllers/categoriesController.php';
     require '../controllers/servicesController.php';
+    require '../controllers/imagesController.php';
 ?>
 <header>
 <?php if ($_SESSION['status'] == 1):?>

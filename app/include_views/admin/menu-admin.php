@@ -3,7 +3,7 @@
     <ul>
         <li><a href="<?=BASE_URL . 'app/admin/categories.php'?>">Категории</li></a>
         <li><a href="<?=BASE_URL . 'app/admin/services.php'?>">Услуги</li></a>
-        <li><a href="#">Изображения</li></a>
+        <li><a href="<?=BASE_URL . 'app/admin/images.php'?>">Изображения</li></a>
     </ul>
 </div
         

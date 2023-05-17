@@ -3,7 +3,7 @@
         <div class="row text-center">
           <div class="col-xl-4">
             <div class="phone icon-phone"> 
-              +7 (902) 512-88-92
+              +9 (999) 999-99-99
             </div>
           </div>
           <div class="col-xl-4">
