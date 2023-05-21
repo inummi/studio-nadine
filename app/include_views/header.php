@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="col-xl-4">
-            <a href="#">
+            <a href="<?=BASE_URL?>">
                 <div class="logo">
                   <img src="assets/img/logo.png" width="221px" alt="Nadine - Призводство текстильных изделий">
                 </div>
